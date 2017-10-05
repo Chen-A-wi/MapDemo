@@ -28,10 +28,6 @@ System.out.println(entry.getKey()+" "+entry.getValue());
 
 從輸出結果中我們可以看到，hashMap輸出key時，並沒有依照插入時的順序，也沒有依照Key或是Value所排序，所以我們若需要有排序功能的map時，不能選擇HashMap。
 
-<center>
-<img src="/assets/HashMap Log.png" alt="Cowman" style="border-radius:5px; box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4)" width="500" height="100" border="10"/>
-</center>
-
 ##LinkedHashMap
 
 LinkedHashMap內部是用linked list來維護其順序性，所以在iterate時其結果乃是依照元素的插入順序或最近最少使用(least-recently-used)順序。在使用上其與hashmap相似，速度只稍差些；但在iterate時卻是比hashmap還來得快。
@@ -53,12 +49,6 @@ for (Map.Entry<String, String> entry : linkedHashMap.entrySet()) {
 System.out.println(entry.getKey() + " " + entry.getValue());
 }
 ```
-
-可以看到輸出結果與code所put順序一樣。
-
-<center>
-<img src="/assets/LinkedHashMap Log.png" alt="Cowman" style="border-radius:5px; box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4)" width="400" height="100" border="10"/>
-</center>
 
 ##TreeMap
 
@@ -95,9 +85,6 @@ for (Map.Entry<String, String> entry : treeMap.entrySet()) {
 System.out.println(entry.getKey() + " " + entry.getValue());
 }
 ```
-<center>
-<img src="/assets/TreeMap Log.png" alt="Cowman" style="border-radius:5px; box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4)" width="550" height="300" border="10"/>
-</center>
 
 ##EnumMap
 
@@ -142,12 +129,6 @@ System.out.println(entry.getKey()+" "+entry.getKey().getCode()+" "+entry.getValu
 }
 }
 ```
-
-可看到輸出的順序為key按照自然排序法(Natural Ordering)排序。
-
-<center>
-<img src="/assets/EnumMap Log.png" alt="Cowman" style="border-radius:5px; box-shadow:5px 5px 10px rgba(0, 0, 0, 0.4)" width="400" height="150" border="10"/>
-</center>
 
 如需更多可參考我的[GitBook](https://www.gitbook.com/book/chen-a-wi/-sofware-engineer-survival-guide/details)
 
